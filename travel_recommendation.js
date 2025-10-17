@@ -32,8 +32,9 @@ function getRecommendations(input) {
             let recommendations = [];
 
             //check if input matches any keyword categories in data
-            if (Object.keys(travelInfo).includes(input)) {
-                travelInfo[input].forEach(item => recommendations.push(item));
+            const matchedKey = checkMatchedKey(input, travelInfo);
+            if (matchedKey) {
+                travelInfo[matchedKey].forEach(item => recommendations.push(item));
             } else {
 
                 //if no keyword match, check for country name or city name matches
@@ -69,6 +70,10 @@ function getRecommendations(input) {
         })
 }
 
+function checkMatchedKey(inputTerm, data) {
+    const matchedKey = Object.keys(data).find(key => key.toLowerCase().includes(inputTerm));
+    return matchedKey;
+}
 
 
 function displayRecommendations(recommendations) {
