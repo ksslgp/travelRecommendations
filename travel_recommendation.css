@@ -17,12 +17,12 @@ nav {
 
 nav ul {
     list-style-type: none;
-   
+
     /* padding: 0; */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 10px;
 
 }
@@ -32,24 +32,59 @@ nav a {
     color: #333;
     font-weight: bold;
 }
+
 .active {
-        background-color: #00B5F5;; /* Example: Green background */
-        color: white;             /* Example: White text */
-        font-weight: bold;        /* Example: Bold text */
-        padding: 5px 10px;       /* Example: Padding for better appearance */
-        border-radius: 5px;      /* Example: Rounded corners */
-        text-decoration: underline; /* Example: Underline for accessibility */
-    }
+    background-color: #00B5F5;
+    ;
+    /* Example: Green background */
+    color: white;
+    /* Example: White text */
+    font-weight: bold;
+    /* Example: Bold text */
+    padding: 5px 10px;
+    /* Example: Padding for better appearance */
+    border-radius: 5px;
+    /* Example: Rounded corners */
+    text-decoration: underline;
+    /* Example: Underline for accessibility */
+}
 
 .pill-shaped {
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    padding: 10px 20px;
-
-    width: 200px;
+    border: 2x solid teal;
+    border-radius: 30px;
+    
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    width: 35%;
+   height: 30px;
     text-align: center;
-    transition: border-color 0.3s;
+    
 }
+
+.pill-shaped input[type="text"]{
+    border: none;
+    
+    
+}
+.pill-shaped input::placeholder {
+    
+    font-size: 12px;
+    background-color: transparent;
+    color: teal;
+}
+
+.pill-shaped  button {
+    background-color: teal;
+    color: white;
+    font-size: 10px;
+    border: none;
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -123,7 +158,63 @@ body {
     justify-content: center;
     width: 40%;
     /*margin-right: 50px;*/
-    border: 1px solid blue;
+    
+    color: white;
+    border-radius: 10px;;
+
+}
+
+#searchResult .card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#searchResult .card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#searchResult .card .card-text {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+#searchResult .card .card-text h4 {
+    margin: 5px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    
+
+}
+
+#searchResult .card .card-text p {
+    margin: 5px 5px;
+    font-size: 12px;
+    color: darkslategray;
+    
+}
+
+#searchResult .card .card-text a {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: teal;
+    color: white;
+    text-align: center;;
+    border-radius: 5px;
+    
 }
 
 
@@ -197,7 +288,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 15px;
-    
+
     max-width: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -206,6 +297,7 @@ footer {
     align-items: center;
     gap: 20px;
 }
+
 .cardtext-container h4,
 .cardtext-container p {
     color: white;
@@ -213,6 +305,13 @@ footer {
     font-size: 12px;
     line-height: 1.2;
 }
+
+/* Result section CSS */
+
+
+
+
+
 
 /* Contact Us Page CSS */
 
@@ -243,7 +342,8 @@ footer {
 #contactForm label {
     display: block;
     color: #d3d3d3;
-    font-size: 12px;;
+    font-size: 12px;
+    ;
     font-style: italic;
 }
 
@@ -260,18 +360,23 @@ footer {
 }
 
 
-input::placeholder, textarea::placeholder {
-        font-family: "Arial", sans-serif; /* Change to your desired font */
-        font-size: 14px; /* Adjust font size as needed */
-        color: #999; /* Change color as needed */
-        /* Other font properties like font-weight, font-style can also be applied */
-    }
+input::placeholder,
+textarea::placeholder {
+    font-family: "Arial", sans-serif;
+    /* Change to your desired font */
+    font-size: 14px;
+    /* Adjust font size as needed */
+    color: #999;
+    /* Change color as needed */
+    /* Other font properties like font-weight, font-style can also be applied */
+}
 
 
 #contactForm button {
     width: 100%;
-    background-color: #0043E0;;
-    color:  white;
+    background-color: #0043E0;
+    ;
+    color: white;
     padding: 14px;
     margin: 8px 0;
     border: none;
